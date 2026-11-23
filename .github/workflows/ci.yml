@@ -16,8 +16,8 @@ jobs:
         node-version: [22.x]
 
     defaults:
-  run:
-    working-directory: ./CI_CD/Practice
+      run:
+        working-directory: ./CI_CD/Practice
 
     steps:
       - name: Checkout repository
