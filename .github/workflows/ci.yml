@@ -16,8 +16,8 @@ jobs:
         node-version: [22.x]
 
     defaults:
-      run:
-        working-directory: ./CI_CD
+  run:
+    working-directory: ./CI_CD/Practice
 
     steps:
       - name: Checkout repository
@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
-          cache-dependency-path: CI_CD/package-lock.json
+          cache-dependency-path: CI_CD/Practice/package-lock.json
 
       - name: Install dependencies
         run: npm ci
